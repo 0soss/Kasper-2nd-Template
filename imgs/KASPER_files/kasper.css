@@ -1,0 +1,519 @@
+/* Start Global */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("../webfonts/fa-solid-900.woff2");
+}
+
+:root {
+    --mainColor: #19c8fa;
+    --transparentColor: rgb(15 116 143 / 70%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.unstyledButton {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    appearance: none;
+}
+
+/* SectionText */
+.sectionText {
+    width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sectionText h2 {
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.sectionText p {
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 100;
+    color: gray;
+}
+
+.sectionText h2::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 2px;
+    width: 150px;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sectionText h2::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* End Global */
+
+/* MEDIA QUERIES */
+@media (max-width: 767px) {
+
+    .container,
+    .sectionText {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 730px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 950px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1150px;
+    }
+}
+
+/* End Media */
+
+
+
+/* Start Header */
+header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+header .logoMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 86.9px;
+}
+
+.logoMenu::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: calc(100% - 30px);
+    background-color: white;
+    bottom: 0;
+    z-index: -1;
+}
+
+header .logo img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 60px;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav .menuIcon i {
+    color: white;
+    font-size: 18px;
+    padding-right: 15px;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    padding: 35px 15px;
+    display: block;
+    color: white;
+    transition: 0.3;
+}
+
+header ul li a.active,
+header ul li a:hover {
+    color: var(--mainColor);
+    border-bottom: 1px solid var(--mainColor);
+    z-index: 3;
+}
+
+header nav .menuIcon:hover+ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: black;
+    top: 54px;
+    left: 0;
+    width: 100%;
+    opacity: 80%;
+}
+
+header nav .menuIcon:hover+ul li a {
+    padding: 15px 20px;
+}
+
+@media (max-width: 767px) {
+    header nav .menu {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    header nav .menuIcon i {
+        display: none;
+    }
+
+}
+
+header nav .search i {
+    color: white;
+    font-size: 18px;
+    border-left: 1px solid white;
+    padding: 10px 0px 10px 15px;
+}
+
+/* End Header */
+
+/* Start Landing */
+.landing {
+    min-height: 100vh;
+    background-color: #DDD;
+    background-image: url(../imgs/landing.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: -2;
+}
+
+.landing .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 60%;
+}
+
+.landing .text {
+    color: white;
+    position: absolute;
+    background-color: var(--transparentColor);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px;
+    flex-direction: column;
+}
+
+.landing .text h2 {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.6;
+    padding-bottom: 10px;
+}
+
+.landing .text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.landing .content {
+    max-width: 500px;
+}
+
+@media (max-width: 767px) {
+    .landing .text {
+        max-width: 100%;
+    }
+
+    .landing .content {
+        max-width: 100%;
+    }
+}
+
+.landing .changeBackground {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 60%;
+}
+
+.landing .fa-angle-left {
+    left: 10px;
+}
+
+.landing .fa-angle-right {
+    right: 10px;
+}
+
+@media (max-width: 767px) {
+    .landing .changeBackground {
+        display: none;
+    }
+}
+
+.landing .bullets {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    display: flex;
+    width: 70px;
+    justify-content: space-between;
+}
+
+.landing .bullets li {
+    border: 1px white solid;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.landing .bullets .active {
+    background-color: var(--mainColor);
+    border-color: var(--mainColor);
+}
+
+/* End Landing */
+/* Start Services */
+.services {
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.services .ourServices {
+    position: relative;
+    display: grid;
+    margin: 50px auto;
+}
+
+@media (min-width: 768px) {
+    .services .ourServices {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, auto);
+
+    }
+}
+
+.services .ourServices div {
+    display: flex;
+    margin: 20px;
+}
+
+.services .ourServices div i {
+    font-size: 40px;
+    margin: 20px 0;
+
+}
+
+.services .ourServices div .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.services .ourServices div .text h2 {
+    font-size: 20px;
+    color: var(--mainColor);
+    margin-bottom: 15px;
+}
+
+.services .ourServices div .text p {
+    line-height: 1.4;
+    color: gray;
+}
+
+@media (max-width: 767px) {
+    .services .ourServices div {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .ourDesign {
+    height: 600px;
+    padding: 20px 0px;
+    margin: 50px 0px;
+    position: relative;
+    background-color: rgb(36, 36, 36);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.services .ourDesign .img {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.services .ourDesign .img img {
+    position: relative;
+    background-size: cover;
+    bottom: -150px;
+    left: 50px;
+}
+
+
+
+.services .ourDesign .text {
+    color: white;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--transparentColor);
+    padding: 50px;
+}
+
+.services .ourDesign .text .content {
+    max-width: 500px;
+}
+
+.services .ourDesign .text h2 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+
+.services .ourDesign .text ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.services .ourDesign .text ul li::before {
+    position: absolute;
+    content: "\f109";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 600;
+    left: 0;
+}
+
+@media (max-width: 991px) {
+    .services .ourDesign .img {
+        display: none;
+    }
+
+    .services .ourDesign .text {
+        justify-content: center;
+
+    }
+}
+
+/* End Services */
+
+/* Start Portfolio */
+.portfolio {
+    position: relative;
+}
+
+.portfolio ul {
+    display: flex;
+    margin: 50px 0px;
+    justify-content: center;
+}
+
+.portfolio ul li {
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.portfolio ul li.active,
+.portfolio .more {
+    color: white;
+    background-color: var(--mainColor);
+}
+
+.portfolio .more {
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.portfolio .items {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.portfolio .items .box {
+    overflow: hidden;
+    position: relative;
+    flex-basis: 25%;
+    height: 200px;
+    width: fit-content;
+}
+
+.portfolio .items .box img {
+    transition: 0.3s;
+}
+
+/* End Portfolio */
