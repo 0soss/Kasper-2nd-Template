@@ -1257,4 +1257,9 @@ footer .container ul li a {
     color: white;
 }
 
+footer .container p span {
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
 /* End footer */
