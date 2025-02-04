@@ -1257,9 +1257,12 @@ footer .container ul li a {
     color: white;
 }
 
+<<<<<<< HEAD
 footer .container p span {
     color: var(--mainColor);
     font-weight: bold;
 }
 
+=======
+>>>>>>> 8b00e73e7f1a328c109a1b28e6bf83eeb47071dc
 /* End footer */
