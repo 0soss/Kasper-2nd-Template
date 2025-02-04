@@ -1203,7 +1203,7 @@ header nav .search i {
 /* Start footer */
 footer {
     position: relative;
-    background-image: url(imgs/subscribe.jpg);
+    background-image: url(/imgs/subscribe.jpg);
     padding: 50px 0px;
     background-size: cover;
     color: white;
