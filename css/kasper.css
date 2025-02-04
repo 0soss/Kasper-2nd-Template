@@ -642,7 +642,7 @@ header nav .search i {
 
 /* Start Stats */
 .stats {
-    background-image: url(/imgs/stats.png);
+    background-image: url(imgs/stats.png);
     background-size: cover;
     position: relative;
     padding: var(--sectionPadding) 0px;
@@ -892,7 +892,7 @@ header nav .search i {
 /* Start Quote */
 .quote {
     position: relative;
-    background-image: url(/imgs/quote.jpg);
+    background-image: url(imgs/quote.jpg);
     color: white;
     text-align: center;
     padding: var(--sectionPadding) 0px;
@@ -1044,7 +1044,7 @@ header nav .search i {
 /* Start Sub */
 .sub {
     position: relative;
-    background-image: url(/imgs/subscribe.jpg);
+    background-image: url(imgs/subscribe.jpg);
     width: 100%;
     background-size: cover;
     padding: var(--sectionPadding) 0px;
@@ -1203,7 +1203,7 @@ header nav .search i {
 /* Start footer */
 footer {
     position: relative;
-    background-image: url(/imgs/subscribe.jpg);
+    background-image: url(imgs/subscribe.jpg);
     padding: 50px 0px;
     background-size: cover;
     color: white;
